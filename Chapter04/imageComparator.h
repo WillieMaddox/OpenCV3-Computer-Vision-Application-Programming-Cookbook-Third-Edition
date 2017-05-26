@@ -18,8 +18,8 @@ Copyright (C) 2016 Robert Laganiere, www.laganiere.name
 #if !defined ICOMPARATOR
 #define ICOMPARATOR
 
-#include <opencv2\core\core.hpp>
-#include <opencv2\imgproc\imgproc.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
 #include "colorhistogram.h"
 
 class ImageComparator {

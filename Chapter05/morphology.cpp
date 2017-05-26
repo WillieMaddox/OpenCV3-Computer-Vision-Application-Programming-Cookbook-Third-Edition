@@ -16,9 +16,9 @@ and any consequent failure, is purely the responsibility of the user.
 Copyright (C) 2016 Robert Laganiere, www.laganiere.name
 \*------------------------------------------------------------------------------------------*/
 
-#include <opencv2\core.hpp>
-#include <opencv2\imgproc.hpp>
-#include <opencv2\highgui.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
 
 int main()
 {
