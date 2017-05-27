@@ -83,9 +83,12 @@ void drawHOGDescriptors(const cv::Mat &image,  // the input image
 	for (int i = 0; i < image.rows / cellSize.height; i++) {
 		for (int j = 0; j < image.cols / cellSize.width; j++) {
 			// draw wach cell
-			hogImage(cv::Rect(j*cellSize.width, i*cellSize.height, cellSize.width, cellSize.height));
-			drawHOG(itDesc, nBins, hogImage(cv::Rect(j*cellSize.width, i*cellSize.height,
-				                           cellSize.width, cellSize.height)), scale);
+//			hogImage(cv::Rect(j*cellSize.width, i*cellSize.height, cellSize.width, cellSize.height));
+//			drawHOG(itDesc, nBins, hogImage(cv::Rect(j*cellSize.width, i*cellSize.height,
+//				                           cellSize.width, cellSize.height)), scale);
+//		    hogImage(cv::Rect(j*cellSize.width, i*cellSize.height, cellSize.width, cellSize.height));
+            cv::Mat temp = hogImage(cv::Rect(j*cellSize.width, i*cellSize.height, cellSize.width, cellSize.height));
+			drawHOG(itDesc, nBins, temp, scale);
 			itDesc += nBins;
 		}
 	}
@@ -266,5 +269,5 @@ int main()
 
 	cv::imshow("People detection", myImage);
 
-	cv::waitKey();
+	cv::waitKey(0);
 }
